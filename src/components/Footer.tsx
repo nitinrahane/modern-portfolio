@@ -66,9 +66,9 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Let's Connect</h4>
             <div className="space-y-2 text-gray-300">
-              <p>📧 john@example.com</p>
-              <p>📱 +1 (555) 123-4567</p>
-              <p>📍 San Francisco, CA</p>
+              <p>📧 contact@nitinrahane.com</p>
+              <p>📱 +91 - 966 502 9898</p>
+              <p>📍 Pune, India</p>
             </div>
             <div className="space-y-2">
               <p className="text-sm text-gray-400">

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "build:subdomain": "astro build --config astro.config.subdomain.mjs",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod",
+    "deploy:preview": "npm run build && npm run preview"
+  }
+}

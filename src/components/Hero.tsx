@@ -34,7 +34,7 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="w-32 h-32 bg-gradient-to-br from-primary-500 to-purple-500 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-2xl">
-                JS
+                NR
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-purple-500 rounded-full blur-lg opacity-30 scale-110"></div>
             </div>
@@ -76,7 +76,7 @@ export default function Hero() {
             className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-400"
           >
             <MapPin size={18} />
-            <span>San Francisco, CA</span>
+            <span>Pune, India</span>
           </motion.div>
 
           {/* CTA Buttons */}
@@ -125,7 +125,7 @@ export default function Hero() {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:john@example.com"
+              href="mailto:contact@nitinrahane.com"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
               aria-label="Email"
             >

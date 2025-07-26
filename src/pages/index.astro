@@ -1,5 +1,12 @@
 ---
 import Portfolio from '../components/Portfolio';
+import BrandCarousel from '../components/BrandCarousel';
+import ServicesSection from '../components/ServicesSection';
+import TestimonialsCarousel from '../components/TestimonialsCarousel';
+import YouTubeVideo from '../components/YouTubeVideo';
+import ScheduleCall from '../components/ScheduleCall';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 import { getCollection } from 'astro:content';
 import BlogListClient from '../components/BlogListClient';
 import CaseStudyListClient from '../components/CaseStudyListClient';
@@ -43,6 +50,32 @@ const sortedCaseStudies = caseStudies.sort((a, b) => b.data.date.localeCompare(a
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	</head>
 	<body>
+		<!-- 1. Hero Section - First Impression & Navigation -->
 		<Portfolio blogs={sortedBlogs} caseStudies={sortedCaseStudies} client:load />
+		
+		<!-- 2. Brand Credibility - Social Proof Through Companies -->
+		<BrandCarousel client:load />
+		
+		<!-- 3. Services - Clear Value Proposition -->
+		<ServicesSection client:load />
+		
+		<!-- 4. Social Proof - Client Testimonials -->
+		<TestimonialsCarousel client:load />
+		
+		<!-- 5. Personal Connection - Video Introduction -->
+		<YouTubeVideo client:load />
+		
+		<!-- 6. Primary CTA - Schedule Consultation -->
+		<div class="py-16 bg-gray-50 dark:bg-gray-900">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<ScheduleCall client:load />
+			</div>
+		</div>
+		
+		<!-- 7. Secondary CTA - Contact Form -->
+		<Contact client:load />
+		
+		<!-- 8. Footer - Professional Closure -->
+		<Footer client:load />
 	</body>
 </html>

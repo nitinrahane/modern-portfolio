@@ -7,7 +7,7 @@ export default function Experience() {
     {
       title: 'Senior Full-Stack Developer',
       company: 'TechCorp Inc.',
-      location: 'San Francisco, CA',
+      location: 'Pune, India',
       period: '2022 - Present',
       type: 'Full-time',
       description: [

@@ -45,20 +45,20 @@ export default function Contact() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      content: 'john@example.com',
-      link: 'mailto:john@example.com',
+      content: 'contact@nitinrahane.com',
+      link: 'mailto:contact@nitinrahane.com',
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      content: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      content: '+91 96650 29898',
+      link: 'tel:+919665029898',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      content: 'San Francisco, CA',
-      link: 'https://maps.google.com/?q=San+Francisco,+CA',
+      content: 'Pune, India',
+      link: 'https://maps.google.com/?q=Pune,+India',
     },
   ];
 
@@ -66,19 +66,19 @@ export default function Contact() {
     {
       name: 'GitHub',
       icon: <Github className="w-5 h-5" />,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/nitinrahane',
       color: 'hover:text-gray-900 dark:hover:text-white',
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin className="w-5 h-5" />,
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://linkedin.com/in/nitinrahane',
       color: 'hover:text-blue-600',
     },
     {
       name: 'Twitter',
       icon: <Twitter className="w-5 h-5" />,
-      url: 'https://twitter.com/yourusername',
+      url: 'https://twitter.com/nitinrahane',
       color: 'hover:text-blue-400',
     },
   ];
@@ -302,7 +302,7 @@ export default function Contact() {
                 I'd love to hear from you.
               </p>
               <div className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                <p>📍 Based in San Francisco, CA</p>
+                <p>📍 Based in Pune, India</p>
                 <p>🌍 Available for remote work worldwide</p>
                 <p>⚡ Usually responds within 24 hours</p>
               </div>

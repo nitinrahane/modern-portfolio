@@ -46,7 +46,7 @@ interface User {
 
 const UserList = () => {
   const users: User[] = [
-    { id: 1, name: "John", email: "john@example.com" },
+    { id: 1, name: "John", email: "contact@nitinrahane.com" },
     { id: 2, name: "Jane", email: "jane@example.com" }
   ];
 

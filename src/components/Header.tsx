@@ -42,7 +42,7 @@ export default function Header({ darkMode, toggleDarkMode }: HeaderProps) {
               }}
               className="text-2xl font-bold gradient-text"
             >
-              Portfolio
+              Nitin Rahane
             </a>
           </div>
 

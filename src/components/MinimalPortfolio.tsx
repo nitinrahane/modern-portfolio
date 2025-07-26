@@ -143,13 +143,13 @@ export default function MinimalPortfolio() {
             </p>
             <div className="space-y-4">
               <p className="text-gray-600 dark:text-gray-300">
-                📧 john@example.com
+                📧 contact@nitinrahane.com
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                📱 +1 (555) 123-4567
+                📱 +91 - 966 502 9898
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                📍 San Francisco, CA
+                📍 Pune, India
               </p>
             </div>
           </div>
