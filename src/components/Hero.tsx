@@ -49,7 +49,7 @@ export default function Hero() {
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-balance">
               Hi, I'm{' '}
-              <span className="gradient-text">John Smith</span>
+              <span className="gradient-text">Nitin Rahane</span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
               Full-Stack Developer & UI/UX Designer

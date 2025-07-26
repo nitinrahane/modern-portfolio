@@ -7,7 +7,7 @@ export default function MinimalPortfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-              John Smith
+              Nitin Rahane
             </h1>
             <nav className="space-x-4">
               <a href="#about" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
@@ -158,7 +158,7 @@ export default function MinimalPortfolio() {
 
       <footer className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p>&copy; 2024 John Smith. All rights reserved.</p>
+          <p>&copy; 2024 Nitin Rahane. All rights reserved.</p>
         </div>
       </footer>
     </div>

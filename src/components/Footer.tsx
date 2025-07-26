@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand & Description */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold gradient-text">John Smith</h3>
+            <h3 className="text-2xl font-bold gradient-text">Nitin Rahane</h3>
             <p className="text-gray-300">
               Full-Stack Developer passionate about creating exceptional digital experiences 
               with modern technologies and thoughtful design.
@@ -81,7 +81,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-gray-400 text-sm">
-            © {currentYear} John Smith. All rights reserved.
+            © {currentYear} Nitin Rahane. All rights reserved.
           </div>
           
           <button
