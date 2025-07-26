@@ -46,7 +46,7 @@ Before you begin, ensure you have the following installed:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/modern-portfolio.git
+git clone https://github.com/nitinrahane/modern-portfolio.git
 cd modern-portfolio
 
 # Install dependencies
@@ -460,7 +460,7 @@ We welcome contributions from the community! This project serves as both a portf
 
 ```bash
 # 1. Fork the repository
-git clone https://github.com/yourusername/modern-portfolio.git
+git clone https://github.com/nitinrahane/modern-portfolio.git
 
 # 2. Create a feature branch
 git checkout -b feature/amazing-feature
@@ -520,16 +520,15 @@ copies or substantial portions of the Software.
 ## 📞 Contact & Support
 
 ### 🛠️ **Technical Support**
-- **GitHub Issues**: [Report bugs or request features](https://github.com/yourusername/modern-portfolio/issues)
-- **Discussions**: [Ask questions and share ideas](https://github.com/yourusername/modern-portfolio/discussions)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/nitinrahane/modern-portfolio/issues)
+- **Discussions**: [Ask questions and share ideas](https://github.com/nitinrahane/modern-portfolio/discussions)
 - **Documentation**: Check this README and inline code comments
 
 ### 👤 **Creator Contact**
-- **Portfolio**: [yourportfolio.com](https://yourportfolio.com)
-- **Email**: your.email@example.com  
-- **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-- **Twitter**: [@yourusername](https://twitter.com/yourusername)
-- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **Portfolio**: [nitinrahane.com](https://nitinrahane.com/)
+- **Email**: nitin.rahane11@gmail.com / contact@nitinrahane.com  
+- **LinkedIn**: [linkedin.com/in/nitinrahane](https://www.linkedin.com/in/nitinrahane/)
+- **GitHub**: [@nitinrahane](https://github.com/nitinrahane)
 
 ### 🌟 **Show Your Support**
 If this project helped you, please consider:
