@@ -125,7 +125,7 @@ npm run type-check   # Run TypeScript checks
 ## 📁 Project Architecture
 
 ```
-personal-project/
+modern-portfolio/
 ├── 📁 public/                          # Static assets
 │   └── favicon.svg                     # Site favicon
 ├── 📁 src/
