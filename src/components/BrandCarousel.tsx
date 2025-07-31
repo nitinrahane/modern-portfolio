@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { calculateExperience } from '../utils/experience';
 
 interface Brand {
   name: string;
@@ -8,6 +9,7 @@ interface Brand {
 }
 
 const BrandCarousel: React.FC = () => {
+  const yearsOfExperience = calculateExperience();
   const brands: Brand[] = [
     {
       name: "Microsoft",
@@ -17,27 +19,27 @@ const BrandCarousel: React.FC = () => {
     {
       name: "Azure",
       logo: "https://img.icons8.com/fluency/96/azure-1.png", 
-      description: "Cloud Services"
-    },
-    {
-      name: "Clutron",
-      logo: "https://via.placeholder.com/96x96/4F46E5/FFFFFF?text=C",
-      description: "Technology Solutions"
+      description: "Cloud Platform"
     },
     {
       name: "TCS",
-      logo: "https://via.placeholder.com/96x96/0F172A/FFFFFF?text=TCS",
-      description: "Digital Transformation"
+      logo: "https://logos-world.net/wp-content/uploads/2020/09/Tata-Consultancy-Services-TCS-Logo.png",
+      description: "IT Consulting"
     },
     {
-      name: "Infosys",
-      logo: "https://via.placeholder.com/96x96/3B82F6/FFFFFF?text=I",
-      description: "IT Services"
+      name: "Accenture",
+      logo: "https://logos-world.net/wp-content/uploads/2020/07/Accenture-Logo.png",
+      description: "Digital Solutions"
     },
     {
-      name: "Wipro",
-      logo: "https://via.placeholder.com/96x96/10B981/FFFFFF?text=W",
-      description: "Global IT Solutions"
+      name: "Tech Mahindra",
+      logo: "https://logos-world.net/wp-content/uploads/2020/09/Tech-Mahindra-Logo.png",
+      description: "Technology Services"
+    },
+    {
+      name: "HCL",
+      logo: "https://logos-world.net/wp-content/uploads/2020/09/HCL-Logo.png",
+      description: "Software Development"
     }
   ];
 
@@ -53,26 +55,26 @@ const BrandCarousel: React.FC = () => {
   }, [totalSlides]);
 
   const stats = [
-    { number: "10+", label: "Years Experience" },
+    { number: `${yearsOfExperience}+`, label: "Years Experience" },
     { number: "50+", label: "Projects Completed" },
     { number: "15+", label: "Happy Clients" },
-    { number: "5+", label: "Technologies Mastered" }
+    { number: "8+", label: "Technologies Mastered" }
   ];
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
             Brands I've Worked With
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-4">
             Trusted by leading companies to deliver exceptional digital experiences and robust solutions.
           </p>
         </div>
         
         {/* Carousel Container */}
-        <div className="relative mb-16">
+        <div className="relative mb-12 sm:mb-16">
           <div className="overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
@@ -81,7 +83,7 @@ const BrandCarousel: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -300 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
               >
                 {brands.slice(currentIndex * itemsPerSlide, (currentIndex * itemsPerSlide) + itemsPerSlide).map((brand, index) => (
                   <motion.div
@@ -89,21 +91,21 @@ const BrandCarousel: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center border border-gray-200 dark:border-gray-700"
+                    className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 text-center border border-gray-200 dark:border-gray-700"
                   >
-                    <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <img
                         src={brand.logo}
                         alt={brand.name}
-                        className="w-16 h-16 object-contain"
+                        className="w-10 h-10 sm:w-16 sm:h-16 object-contain"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.src = `https://via.placeholder.com/64x64/4F46E5/FFFFFF?text=${brand.name.charAt(0)}`;
                         }}
                       />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{brand.name}</h3>
-                    <p className="text-gray-600 dark:text-gray-300">{brand.description}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">{brand.name}</h3>
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">{brand.description}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -127,7 +129,7 @@ const BrandCarousel: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -135,12 +137,12 @@ const BrandCarousel: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700"
+              className="text-center bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 shadow-lg border border-gray-200 dark:border-gray-700"
             >
-              <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
+              <div className="text-2xl sm:text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1 sm:mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">
+              <div className="text-sm sm:text-base text-gray-600 dark:text-gray-300 font-medium">
                 {stat.label}
               </div>
             </motion.div>

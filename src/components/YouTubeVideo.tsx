@@ -2,11 +2,11 @@ import React from 'react';
 
 const YouTubeVideo: React.FC = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Meet Nitin Rahane</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Meet <span className="gradient-text">Nitin Rahane</span></h2>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto text-balance">
             Learn more about my journey and expertise as a Full-Stack Web Developer with over 10 years of experience in building scalable applications and digital solutions.
           </p>
         </div>

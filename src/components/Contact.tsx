@@ -84,19 +84,19 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto container-padding">
+    <section id="contact" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
             I'm always open to discussing new opportunities, interesting projects, 
             or just having a friendly conversation about technology.
           </p>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Palette, Zap, Users, Award, Heart } from 'lucide-react';
+import { getTotalExperience } from '../utils/experience';
 
 export default function About() {
   const stats = [
-    { number: '5+', label: 'Years Experience' },
+    { number: `${getTotalExperience()}+`, label: 'Years Experience' },
     { number: '50+', label: 'Projects Completed' },
     { number: '100+', label: 'Happy Clients' },
     { number: '10+', label: 'Technologies Mastered' },
@@ -44,25 +45,25 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto container-padding">
+    <section id="about" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
             I'm a passionate full-stack developer with a keen eye for design and a love for creating 
             innovative digital solutions that make a positive impact.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-12 sm:mb-16">
           {/* Left Column - Story */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -82,7 +83,7 @@ export default function About() {
                 functional applications.
               </p>
               <p>
-                Over the past 5 years, I've had the privilege of working with startups, agencies, and 
+                Over the past {getTotalExperience()} years, I've had the privilege of working with startups, agencies, and 
                 enterprise companies, helping them bring their visions to life through code. I specialize 
                 in modern web technologies and have a particular interest in React, Node.js, and cloud 
                 architecture.

@@ -80,13 +80,13 @@ export default function Portfolio({ blogs = [], caseStudies = [] }: PortfolioPro
         <Skills />
         
         {/* Blog & Case Studies Preview */}
-        <section id="blogs" className="py-20 bg-white dark:bg-gray-900">
+        <section id="blogs" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Latest Work & <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Insights</span>
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+                Latest Work & <span className="gradient-text">Insights</span>
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
                 Exploring cutting-edge technologies and sharing real-world project experiences to help others in their development journey
               </p>
             </div>
@@ -94,7 +94,7 @@ export default function Portfolio({ blogs = [], caseStudies = [] }: PortfolioPro
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Blog Preview */}
               <div className="space-y-8">
-                <div className="flex items-center space-x-4 mb-8">
+                <div className="flex items-center space-x-4 mb-12 sm:mb-16">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
@@ -135,7 +135,7 @@ export default function Portfolio({ blogs = [], caseStudies = [] }: PortfolioPro
               
               {/* Case Studies Preview */}
               <div id="casestudies" className="space-y-8">
-                <div className="flex items-center space-x-4 mb-8">
+                <div className="flex items-center space-x-4 mb-12 sm:mb-16">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

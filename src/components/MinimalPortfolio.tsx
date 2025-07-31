@@ -1,4 +1,5 @@
 import React from 'react';
+import { getTotalExperience } from '../utils/experience';
 
 export default function MinimalPortfolio() {
   return (
@@ -26,12 +27,12 @@ export default function MinimalPortfolio() {
 
       <main>
         {/* Hero Section */}
-        <section id="home" className="py-20 px-4 text-center">
+        <section id="home" className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               Full-Stack Developer & UI/UX Designer
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-12 sm:mb-16">
               I create exceptional digital experiences with modern technologies. 
               Passionate about building scalable applications and beautiful user interfaces.
             </p>
@@ -47,18 +48,18 @@ export default function MinimalPortfolio() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-20 px-4 bg-white dark:bg-gray-800">
+        <section id="about" className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               About Me
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-              I'm a passionate full-stack developer with 5+ years of experience building web applications. 
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-12 sm:mb-16">
+              I'm a passionate full-stack developer with {getTotalExperience()}+ years of experience building web applications. 
               I specialize in React, Node.js, and cloud technologies.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">{getTotalExperience()}+</div>
                 <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
               </div>
               <div className="text-center">
@@ -78,9 +79,9 @@ export default function MinimalPortfolio() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-20 px-4">
+        <section id="projects" className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white text-center mb-12 sm:mb-16">
               Featured Projects
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -133,12 +134,12 @@ export default function MinimalPortfolio() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-20 px-4 bg-white dark:bg-gray-800">
+        <section id="contact" className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               Get In Touch
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-12 sm:mb-16">
               I'm always open to discussing new opportunities and interesting projects.
             </p>
             <div className="space-y-4">

@@ -20,7 +20,7 @@ interface CaseStudyListClientProps {
 export default function CaseStudyListClient({ caseStudies }: CaseStudyListClientProps) {
   return (
     <section id="casestudies" className="section-padding">
-      <h2 className="text-3xl font-bold mb-8">Case Studies</h2>
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"><span className="gradient-text">Case Studies</span></h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {caseStudies.map((cs) => (
           <article key={cs.id} className="bg-white dark:bg-gray-900 rounded-xl shadow p-6">

@@ -78,8 +78,8 @@ const ContactForm: React.FC = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      content: 'Mumbai, India',
-      link: 'https://maps.google.com/?q=Mumbai,+India',
+      content: 'Pune, India',
+      link: 'https://maps.google.com/?q=Pune,+India',
     },
   ];
 
@@ -105,19 +105,19 @@ const ContactForm: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="contact" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            Get In <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">Touch</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
             I'm always open to discussing new opportunities, interesting projects, and creative collaborations. Let's build something amazing together!
           </p>
         </motion.div>
@@ -132,7 +132,7 @@ const ContactForm: React.FC = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-12 sm:mb-16">
                 Let's Connect
               </h3>
               <div className="space-y-6">

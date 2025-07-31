@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { calculateExperience } from '../utils/experience';
 
 export default function Hero() {
+  const yearsOfExperience = calculateExperience();
   const scrollToAbout = () => {
     const element = document.querySelector('#about');
     if (element) {
@@ -11,19 +13,19 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 px-4 sm:px-6 lg:px-8">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute -top-40 -right-40 w-60 sm:w-80 h-60 sm:h-80 bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute -bottom-40 -left-40 w-60 sm:w-80 h-60 sm:h-80 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto container-padding text-center">
+      <div className="relative z-10 max-w-7xl mx-auto w-full text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-8"
+          className="space-y-6 sm:space-y-8"
         >
           {/* Avatar/Profile Image */}
           <motion.div
@@ -33,10 +35,16 @@ export default function Hero() {
             className="flex justify-center"
           >
             <div className="relative">
-              <div className="w-32 h-32 bg-gradient-to-br from-primary-500 to-purple-500 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-2xl">
-                NR
+              {/* Background blur effect - behind the image */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-purple-500 rounded-full blur-lg opacity-30 scale-110 -z-10"></div>
+              {/* Profile image - in front */}
+              <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden shadow-2xl border-2 sm:border-4 border-white z-10">
+                <img 
+                  src="/profile-picture.jpg" 
+                  alt="Nitin Rahane" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-purple-500 rounded-full blur-lg opacity-30 scale-110"></div>
             </div>
           </motion.div>
 
@@ -47,12 +55,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="space-y-4"
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-balance">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-balance px-2">
               Hi, I'm{' '}
               <span className="gradient-text">Nitin Rahane</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
-              Full-Stack Developer & UI/UX Designer
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance px-4">
+              Senior .NET Developer | Azure Cloud Specialist | React Expert
             </p>
           </motion.div>
 
@@ -61,11 +69,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-balance"
+            className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-balance px-4"
           >
-            I create exceptional digital experiences with modern technologies. 
-            Passionate about building scalable applications and beautiful user interfaces 
-            that make a difference.
+            {yearsOfExperience}+ years of expertise in .NET technologies, Azure cloud solutions, and modern React applications. 
+            Passionate about building scalable enterprise solutions and delivering high-performance web applications 
+            that drive business success.
           </motion.p>
 
           {/* Location */}
@@ -84,16 +92,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+            className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 px-4"
           >
-            <a href="#contact" className="btn-primary">
+            <a href="#contact" className="btn-primary w-full sm:w-auto">
               Get In Touch
             </a>
             <a 
               href="/resume.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-outline"
+              className="btn-outline w-full sm:w-auto"
             >
               Download Resume
             </a>
@@ -104,10 +112,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex items-center justify-center space-x-6"
+            className="flex items-center justify-center space-x-4 sm:space-x-6 px-4"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/nitinrahane"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
@@ -116,7 +124,7 @@ export default function Hero() {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/nitinrahane"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
@@ -125,7 +133,7 @@ export default function Hero() {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:contact@nitinrahane.com"
+              href="mailto:nitin@nitinrahane.com"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
               aria-label="Email"
             >

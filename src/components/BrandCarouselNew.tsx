@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getTotalExperience } from '../utils/experience';
 
 interface Brand {
   name: string;
@@ -53,26 +54,26 @@ const BrandCarousel: React.FC = () => {
   }, [totalSlides]);
 
   const stats = [
-    { number: "10+", label: "Years Experience" },
+    { number: `${getTotalExperience()}+`, label: "Years Experience" },
     { number: "50+", label: "Projects Completed" },
     { number: "15+", label: "Happy Clients" },
-    { number: "5+", label: "Technologies Mastered" }
+    { number: "20+", label: "Technologies Mastered" }
   ];
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Brands I've Worked With
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+            Brands I've <span className="gradient-text">Worked With</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
             Trusted by leading companies to deliver exceptional digital experiences and robust solutions.
           </p>
         </div>
         
         {/* Carousel Container */}
-        <div className="relative mb-16">
+        <div className="relative mb-12 sm:mb-16">
           <div className="overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div

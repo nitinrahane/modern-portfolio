@@ -1,54 +1,55 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { getTotalExperience } from '../utils/experience';
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: 'Frontend Development',
-      icon: '🎨',
-      skills: [
-        { name: 'React', level: 95, color: 'from-blue-500 to-cyan-500' },
-        { name: 'TypeScript', level: 90, color: 'from-blue-600 to-blue-700' },
-        { name: 'Next.js', level: 88, color: 'from-gray-700 to-gray-900' },
-        { name: 'Vue.js', level: 82, color: 'from-green-500 to-emerald-500' },
-        { name: 'Tailwind CSS', level: 93, color: 'from-cyan-500 to-blue-500' },
-        { name: 'Framer Motion', level: 85, color: 'from-pink-500 to-purple-500' },
-      ],
-    },
-    {
       title: 'Backend Development',
       icon: '⚙️',
       skills: [
-        { name: 'Node.js', level: 92, color: 'from-green-600 to-green-700' },
-        { name: 'Express.js', level: 88, color: 'from-gray-600 to-gray-700' },
-        { name: 'NestJS', level: 85, color: 'from-red-500 to-pink-500' },
-        { name: 'Python', level: 80, color: 'from-yellow-500 to-orange-500' },
-        { name: 'GraphQL', level: 83, color: 'from-pink-500 to-purple-500' },
-        { name: 'REST APIs', level: 90, color: 'from-blue-500 to-indigo-500' },
+        { name: '.NET Core', level: 95, color: 'from-purple-500 to-purple-700' },
+        { name: 'C#', level: 93, color: 'from-purple-600 to-indigo-600' },
+        { name: 'ASP.NET MVC', level: 90, color: 'from-blue-500 to-blue-700' },
+        { name: 'Entity Framework', level: 88, color: 'from-green-500 to-blue-500' },
+        { name: 'Web API', level: 92, color: 'from-orange-500 to-red-500' },
+        { name: 'Microservices', level: 85, color: 'from-gray-600 to-gray-800' },
       ],
     },
     {
-      title: 'Database & Cloud',
+      title: 'Frontend Development',
+      icon: '🎨',
+      skills: [
+        { name: 'React', level: 90, color: 'from-blue-500 to-cyan-500' },
+        { name: 'JavaScript', level: 88, color: 'from-yellow-500 to-orange-500' },
+        { name: 'TypeScript', level: 85, color: 'from-blue-600 to-blue-700' },
+        { name: 'HTML5/CSS3', level: 92, color: 'from-orange-500 to-red-500' },
+        { name: 'Bootstrap', level: 87, color: 'from-purple-500 to-pink-500' },
+        { name: 'jQuery', level: 80, color: 'from-blue-400 to-blue-600' },
+      ],
+    },
+    {
+      title: 'Cloud & DevOps',
       icon: '☁️',
       skills: [
-        { name: 'PostgreSQL', level: 87, color: 'from-blue-600 to-blue-800' },
-        { name: 'MongoDB', level: 85, color: 'from-green-500 to-green-700' },
-        { name: 'AWS', level: 82, color: 'from-orange-500 to-orange-600' },
-        { name: 'Docker', level: 80, color: 'from-blue-500 to-blue-600' },
-        { name: 'Firebase', level: 78, color: 'from-yellow-500 to-orange-500' },
-        { name: 'Redis', level: 75, color: 'from-red-500 to-red-600' },
+        { name: 'Microsoft Azure', level: 92, color: 'from-blue-500 to-blue-700' },
+        { name: 'Azure DevOps', level: 88, color: 'from-blue-600 to-indigo-600' },
+        { name: 'Docker', level: 82, color: 'from-blue-500 to-blue-600' },
+        { name: 'CI/CD Pipelines', level: 85, color: 'from-green-500 to-blue-500' },
+        { name: 'Azure Functions', level: 80, color: 'from-purple-500 to-blue-500' },
+        { name: 'App Service', level: 87, color: 'from-blue-400 to-blue-600' },
       ],
     },
     {
-      title: 'Tools & Technologies',
+      title: 'Database & Tools',
       icon: '🛠️',
       skills: [
-        { name: 'Git & GitHub', level: 95, color: 'from-gray-700 to-gray-900' },
-        { name: 'VS Code', level: 92, color: 'from-blue-500 to-blue-600' },
-        { name: 'Figma', level: 85, color: 'from-purple-500 to-pink-500' },
-        { name: 'Jest', level: 80, color: 'from-orange-500 to-red-500' },
-        { name: 'Webpack', level: 75, color: 'from-blue-600 to-cyan-600' },
-        { name: 'CI/CD', level: 78, color: 'from-green-500 to-blue-500' },
+        { name: 'SQL Server', level: 93, color: 'from-red-500 to-red-700' },
+        { name: 'Azure SQL', level: 88, color: 'from-blue-500 to-blue-700' },
+        { name: 'Git & GitHub', level: 90, color: 'from-gray-700 to-gray-900' },
+        { name: 'Visual Studio', level: 95, color: 'from-purple-500 to-purple-700' },
+        { name: 'Postman', level: 85, color: 'from-orange-500 to-orange-600' },
+        { name: 'LINQ', level: 88, color: 'from-green-500 to-green-700' },
       ],
     },
   ];
@@ -56,35 +57,35 @@ export default function Skills() {
   const softSkills = [
     'Problem Solving',
     'Team Leadership',
-    'Communication',
-    'Project Management',
-    'Agile Methodologies',
+    'Technical Architecture',
     'Code Review',
+    'Agile/Scrum',
+    'Client Communication',
     'Mentoring',
-    'Technical Writing',
+    'System Design',
   ];
 
   return (
-    <section id="skills" className="section-padding bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto container-padding">
+    <section id="skills" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             My <span className="gradient-text">Skills</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
             A comprehensive overview of my technical expertise and the tools I use 
             to bring ideas to life.
           </p>
         </motion.div>
 
         {/* Technical Skills */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12 mb-12 sm:mb-16">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -92,16 +93,16 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
-              className="card"
+              className="p-6 sm:p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-6">
-                <span className="text-3xl mr-3">{category.icon}</span>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                <span className="text-2xl sm:text-3xl mr-3">{category.icon}</span>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
                   {category.title}
                 </h3>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
@@ -112,7 +113,7 @@ export default function Skills() {
                     className="space-y-2"
                   >
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-900 dark:text-white">
+                      <span className="text-sm sm:text-base font-medium text-gray-900 dark:text-white">
                         {skill.name}
                       </span>
                       <span className="text-sm text-gray-600 dark:text-gray-400">
@@ -143,10 +144,10 @@ export default function Skills() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-gray-900 dark:text-white">
             Soft Skills & Expertise
           </h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {softSkills.map((skill, index) => (
               <motion.span
                 key={skill}
@@ -154,7 +155,7 @@ export default function Skills() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="px-6 py-3 bg-gradient-to-r from-primary-100 to-purple-100 dark:from-primary-900 dark:to-purple-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-primary-100 to-purple-100 dark:from-primary-900 dark:to-purple-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 {skill}
               </motion.span>
@@ -168,30 +169,30 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-20 text-center"
+          className="mt-16 sm:mt-20 text-center"
         >
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              <div className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                 20+
               </div>
-              <div className="text-gray-700 dark:text-gray-300 font-medium">
+              <div className="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">
                 Technologies Mastered
               </div>
             </div>
             <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl">
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-                5+
+              <div className="text-2xl sm:text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
+                {getTotalExperience()}+
               </div>
-              <div className="text-gray-700 dark:text-gray-300 font-medium">
+              <div className="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">
                 Years of Experience
               </div>
             </div>
-            <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl">
-              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+            <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl sm:col-span-2 lg:col-span-1">
+              <div className="text-2xl sm:text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
                 100%
               </div>
-              <div className="text-gray-700 dark:text-gray-300 font-medium">
+              <div className="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium">
                 Commitment to Quality
               </div>
             </div>
